@@ -1637,13 +1637,20 @@ body {
 .divider{
   display: flex;
   justify-content: space-between;
-  column-gap: 50px;
+  gap: 50px;
   padding: 20px;
   font-size: 15px;
 }
 .imagesize{
     padding-top: 50px;
 }
+@media only screen and (max-width: 600px) {
+  .divider {
+    flex-direction: column; /* Change to a column layout for smaller screens */
+    text-align: center; /* Center-align the content in the column layout */
+  }
+}
+
 
 .border {
   border: 2px solid #ddd;
@@ -1733,3 +1740,7 @@ a:hover {
   flex-direction: row;
   
 }
+/* * {
+  transition: none !important;
+
+} */
