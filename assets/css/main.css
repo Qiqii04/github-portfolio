@@ -1673,17 +1673,27 @@ a:hover {
   display: flex;
   overflow: hidden;
   position: relative;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
 }
 
 /* Style for each project card */
 .project-card {
-  width: 45%; /* Adjust as needed */
+  width: calc(45% - 20px); /* Adjust as needed, considering margin-right */
   padding: 20px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding and borders in the width and height */
   border: 1px solid #ddd;
   border-radius: 8px;
   margin-right: 20px; /* Adjust spacing between cards */
+  margin-bottom: 20px; /* Add margin at the bottom for better spacing */
   transition: transform 0.3s ease-in-out;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+  .project-card {
+    width: 100%; /* Full width for smaller screens */
+    margin-right: 0; /* No margin between cards on smaller screens */
+  }
 }
 
 
